@@ -1,18 +1,14 @@
-/*
-  ⚙️ Apni details yahan daal dein.
-  Jis cheez ki value khali ("") ho, wo footer mein nahi dikhegi.
-*/
-const YOUR_EMAIL = ""; // 👈 apna email daalein, jaise "you@example.com"
+const YOUR_EMAIL = "aatifarbab.dev@gmail.com"; // 👈 Apna email yahan daal dein
 
 const socialLinks = [
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/YOUR-USERNAME", // 👈 apna asli LinkedIn link daalein
+    url: "https://www.linkedin.com/in/aatifarbab", // 👈 Aapka LinkedIn profile link
     path: "M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z",
   },
   {
     name: "GitHub",
-    url: "", // 👈 apna GitHub link daalein
+    url: "https://github.com/aatifarbab", // 👈 Aapka GitHub profile link
     path: "M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z",
   },
 ];
@@ -49,11 +45,11 @@ export default function Footer() {
           <div>
             <h3 style={styles.ctaTitle}>Let's build something great together</h3>
             <p style={styles.ctaText}>
-              Have a project in mind? I'd love to hear about it.
+              Have an exciting project or idea in mind? Let's turn it into reality.
             </p>
           </div>
           <a href="#contact" className="cta-btn" style={styles.ctaBtn}>
-            Get In Touch →
+            Get In Touch ↗
           </a>
         </div>
 
@@ -65,8 +61,7 @@ export default function Footer() {
               Aatif <span style={styles.logoAccent}>Arbab</span>
             </h3>
             <p style={styles.desc}>
-              Frontend React Developer and Computer Science student, building
-              modern, responsive and user-friendly web experiences.
+              Frontend React Developer &amp; Computer Science student at SMIU, engineering modern, high-performance web experiences.
             </p>
 
             {visibleSocials.length > 0 && (
@@ -82,7 +77,7 @@ export default function Footer() {
                     className="social-btn"
                     style={styles.socialBtn}
                   >
-                    <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
                       <path d={s.path} />
                     </svg>
                   </a>
@@ -107,7 +102,7 @@ export default function Footer() {
 
           {/* What I do */}
           <div style={styles.col}>
-            <h4 style={styles.colTitle}>What I Do</h4>
+            <h4 style={styles.colTitle}>Expertise</h4>
             <ul style={styles.list}>
               {services.map((item) => (
                 <li key={item} style={{ ...styles.listItem, ...styles.service }}>
@@ -119,7 +114,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div style={styles.col}>
-            <h4 style={styles.colTitle}>Contact</h4>
+            <h4 style={styles.colTitle}>Connect</h4>
             <ul style={styles.list}>
               {YOUR_EMAIL && (
                 <li style={styles.listItem}>
@@ -130,11 +125,11 @@ export default function Footer() {
               )}
               <li style={styles.listItem}>
                 <a href="#contact" className="footer-link" style={styles.link}>
-                  💬 Send me a message
+                  💬 Send a Message
                 </a>
               </li>
               <li style={{ ...styles.listItem, ...styles.service }}>
-                <span style={styles.available} /> Open to opportunities
+                <span style={styles.available} /> Open to Work
               </li>
             </ul>
           </div>
@@ -171,36 +166,37 @@ const css = `
   }
 
   .social-btn {
-    transition: transform 0.25s ease, background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .social-btn:hover {
-    transform: translateY(-4px);
-    background: linear-gradient(135deg, #38bdf8, #818cf8) !important;
-    color: #0f172a !important;
-    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.35);
+    transform: translateY(-3px);
+    background: rgba(56, 189, 248, 0.15) !important;
+    border-color: rgba(56, 189, 248, 0.5) !important;
+    color: #38bdf8 !important;
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.2);
   }
 
   .cta-btn {
-    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   }
   .cta-btn:hover {
     transform: translateY(-2px);
-    filter: brightness(1.08);
-    box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.35);
   }
 
   .top-btn {
-    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+    transition: all 0.2s ease;
   }
   .top-btn:hover {
     transform: translateY(-2px);
     color: #38bdf8 !important;
-    border-color: rgba(56, 189, 248, 0.6) !important;
+    border-color: rgba(56, 189, 248, 0.5) !important;
+    background: rgba(56, 189, 248, 0.05);
   }
 
   @keyframes pulseDot {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.6); }
-    50%      { box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+    50%      { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
   }
 `;
 
@@ -209,8 +205,9 @@ const styles = {
     position: "relative",
     background: "#0b1220",
     color: "white",
-    padding: "70px 20px 28px",
+    padding: "80px 20px 30px",
     fontFamily: "'Inter', 'Segoe UI', sans-serif",
+    borderTop: "1px solid rgba(255, 255, 255, 0.05)",
   },
 
   topLine: {
@@ -218,101 +215,104 @@ const styles = {
     top: 0,
     left: 0,
     right: 0,
-    height: "2px",
-    background: "linear-gradient(90deg, transparent, #38bdf8, #818cf8, transparent)",
+    height: "1px",
+    background: "linear-gradient(90deg, transparent, rgba(56,189,248,0.5), transparent)",
   },
 
   container: {
-    maxWidth: "1100px",
+    maxWidth: "1150px",
     margin: "auto",
   },
 
-  /* CTA */
+  /* CTA strip */
   cta: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     flexWrap: "wrap",
     gap: "20px",
-    padding: "30px 35px",
-    marginBottom: "55px",
-    borderRadius: "20px",
-    background: "linear-gradient(135deg, rgba(56,189,248,0.12), rgba(129,140,248,0.12))",
-    border: "1px solid rgba(56, 189, 248, 0.25)",
+    padding: "32px 36px",
+    marginBottom: "50px",
+    borderRadius: "16px",
+    background: "rgba(15, 23, 42, 0.75)",
+    backdropFilter: "blur(16px)",
+    border: "1px solid rgba(56, 189, 248, 0.2)",
+    boxShadow: "0 15px 30px rgba(0,0,0,0.4)",
   },
 
   ctaTitle: {
-    fontSize: "22px",
+    fontSize: "20px",
     fontWeight: "700",
     margin: "0 0 6px",
-    color: "#f1f5f9",
+    color: "#f8fafc",
   },
 
   ctaText: {
     margin: 0,
     color: "#94a3b8",
-    fontSize: "15px",
+    fontSize: "14.5px",
   },
 
   ctaBtn: {
-    padding: "13px 28px",
-    background: "linear-gradient(90deg, #38bdf8, #818cf8)",
-    color: "#0f172a",
+    padding: "12px 26px",
+    background: "linear-gradient(135deg, #38bdf8 0%, #0284c7 100%)",
+    color: "#0b1220",
     textDecoration: "none",
     fontWeight: "700",
-    fontSize: "15px",
-    borderRadius: "10px",
+    fontSize: "14.5px",
+    borderRadius: "8px",
     whiteSpace: "nowrap",
+    boxShadow: "0 4px 15px rgba(56, 189, 248, 0.25)",
   },
 
   /* Columns */
   columns: {
     display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+    gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
     gap: "40px",
     textAlign: "left",
   },
 
   brandCol: {
     gridColumn: "span 1",
-    minWidth: "220px",
   },
 
   logo: {
-    fontSize: "26px",
+    fontSize: "24px",
     fontWeight: "800",
     margin: "0 0 12px",
-    color: "#f1f5f9",
+    color: "#f8fafc",
+    letterSpacing: "-0.5px",
   },
 
   logoAccent: {
-    background: "linear-gradient(90deg, #38bdf8, #818cf8)",
+    background: "linear-gradient(135deg, #38bdf8 0%, #818cf8 100%)",
     WebkitBackgroundClip: "text",
     WebkitTextFillColor: "transparent",
   },
 
   desc: {
     color: "#94a3b8",
-    fontSize: "14.5px",
-    lineHeight: "1.75",
+    fontSize: "14px",
+    lineHeight: "1.7",
     margin: "0 0 20px",
   },
 
   socials: {
     display: "flex",
-    gap: "12px",
+    gap: "10px",
   },
 
   socialBtn: {
-    width: "42px",
-    height: "42px",
+    width: "38px",
+    height: "38px",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    borderRadius: "50%",
-    background: "rgba(56, 189, 248, 0.1)",
-    border: "1px solid rgba(56, 189, 248, 0.3)",
-    color: "#38bdf8",
+    borderRadius: "8px",
+    background: "rgba(30, 41, 59, 0.6)",
+    border: "1px solid rgba(255, 255, 255, 0.08)",
+    color: "#cbd5e1",
   },
 
   col: {
@@ -320,11 +320,12 @@ const styles = {
   },
 
   colTitle: {
-    fontSize: "16px",
+    fontSize: "15px",
     fontWeight: "700",
-    margin: "0 0 18px",
-    color: "#f1f5f9",
+    margin: "0 0 16px",
+    color: "#f8fafc",
     letterSpacing: "0.3px",
+    textTransform: "uppercase",
   },
 
   list: {
@@ -334,8 +335,8 @@ const styles = {
   },
 
   listItem: {
-    marginBottom: "12px",
-    fontSize: "14.5px",
+    marginBottom: "10px",
+    fontSize: "14px",
   },
 
   link: {
@@ -354,22 +355,22 @@ const styles = {
   check: {
     color: "#38bdf8",
     fontWeight: "700",
-    fontSize: "13px",
+    fontSize: "12px",
   },
 
   available: {
-    width: "9px",
-    height: "9px",
+    width: "8px",
+    height: "8px",
     borderRadius: "50%",
-    background: "#22c55e",
+    background: "#10b981",
     display: "inline-block",
     animation: "pulseDot 2s ease-in-out infinite",
   },
 
   divider: {
     height: "1px",
-    background: "rgba(148, 163, 184, 0.15)",
-    margin: "50px 0 22px",
+    background: "rgba(255, 255, 255, 0.06)",
+    margin: "45px 0 24px",
   },
 
   /* Bottom */
@@ -395,8 +396,9 @@ const styles = {
     fontSize: "13px",
     color: "#94a3b8",
     textDecoration: "none",
-    padding: "7px 14px",
-    borderRadius: "999px",
-    border: "1px solid rgba(148, 163, 184, 0.3)",
+    padding: "6px 14px",
+    borderRadius: "8px",
+    background: "rgba(15, 23, 42, 0.6)",
+    border: "1px solid rgba(255, 255, 255, 0.08)",
   },
 };
